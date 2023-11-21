@@ -10,18 +10,30 @@ public class metod1 {
         for (int i = 0; i < length; i++) {
             System.out.print("-");
         }
+        System.out.println();
     }
 
-    static void 
+    static void rectangleDrawer(int height, int width) {
+        for (int i = 1; i <= height; i++) {
+            for (int j = 1; j <= width; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
-        Scanner Scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("What is your radius?");
-        double radius = Scanner.nextDouble();
+        double radius = scanner.nextDouble();
 
         System.out.println("The perimeter of your circle is: " + circlePerimeter(radius));
         lineDrawer(10);
+        scanner.nextLine();
+
+        // create a rectangle
+        System.out.println("Create a rectangle ");
+        rectangleDrawer(3, 3);
     }
-
-
 }
